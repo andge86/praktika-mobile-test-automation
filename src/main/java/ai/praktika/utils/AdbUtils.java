@@ -14,8 +14,9 @@ public class AdbUtils {
         String appDir = System.getProperty("user.dir") + "/apps/";
         try {
             Process process = Runtime.getRuntime()
-                    .exec("adb install-multiple " + appDir + "/base.apk " + appDir + "split_config.en.apk " + appDir + "split_config.ar.apk " + appDir + "split_config.arm64_v8a.apk " + appDir + "split_config.xxhdpi.apk");
+                    .exec("adb install-multiple " + appDir + "base.apk " + appDir + "split_config.en.apk " + appDir + "split_config.ar.apk " + appDir + "split_config.arm64_v8a.apk " + appDir + "split_config.xxhdpi.apk");
             process.waitFor();
+            Thread.sleep(10000);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
