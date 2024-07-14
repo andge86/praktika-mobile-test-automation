@@ -62,8 +62,8 @@ jobs:
           api-level: ${{ matrix.api-level }}
           target: ${{ matrix.target }}
           arch: x86_64
-          profile: Nexus 9
-          pre-emulator-launch-script: avdmanager list device
+          profile: Pixel 6
+          pre-emulator-launch-script: adb version
           script: mvn clean test -DsuiteXmlFile=TestNG_Android.xml
         continue-on-error: true
 

@@ -45,7 +45,7 @@ public class DriverManager {
         capabilities.setCapability("platformName", platformName);
         capabilities.setCapability("appium:automationName", "UiAutomator2");
         capabilities.setCapability("appium:autoGrantPermissions", true);
-        capabilities.setCapability("appium:noReset", true);
+        capabilities.setCapability("appium:noReset", false);
         return capabilities;
     }
 

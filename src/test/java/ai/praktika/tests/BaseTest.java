@@ -4,8 +4,6 @@ import ai.praktika.managers.DriverManager;
 import ai.praktika.utils.AdbUtils;
 import org.testng.annotations.*;
 
-import java.io.IOException;
-
 public class BaseTest {
 
     @BeforeMethod
@@ -16,7 +14,7 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void tearDown() throws IOException {
+    public void tearDown() {
         DriverManager.quitDriver();
     }
 
