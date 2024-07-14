@@ -9,7 +9,7 @@ public class BaseTest {
     @BeforeMethod
     @Parameters({"platformName", "run"})
     public void setUp(@Optional("Android") String platformName, @Optional("local") String run) {
-        AdbUtils.installApp();
+      //  AdbUtils.installApp();
         AdbUtils.listInstalledPackages();
         DriverManager.initializeDriver(platformName, run);
     }

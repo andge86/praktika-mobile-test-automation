@@ -65,8 +65,8 @@ jobs:
           target: ${{ matrix.target }}
           arch: x86_64
           profile: Nexus 9
-          pre-emulator-launch-script: pwd
-          script: mvn clean test -DsuiteXmlFile=TestNG_Android.xml
+          pre-emulator-launch-script: adb version
+          script: adb install-multiple apps/base.apk apps/split_config.en.apk apps/split_config.ar.apk apps/split_config.arm64_v8a.apk apps/split_config.xxhdpi.apk & mvn clean test -DsuiteXmlFile=TestNG_Android.xml
         continue-on-error: true
 
       - name: Get Allure history
