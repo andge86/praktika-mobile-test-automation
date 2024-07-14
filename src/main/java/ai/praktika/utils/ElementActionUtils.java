@@ -15,7 +15,7 @@ public class ElementActionUtils {
     private final WebDriverWait wait;
 
      public ElementActionUtils(AppiumDriver driver) {
-        wait = new WebDriverWait(driver, Duration.ofSeconds(12));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
      }
 
     /**

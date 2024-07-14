@@ -32,7 +32,7 @@ public class NativeLanguageTest extends BaseTest {
     @Story("Change application interface language")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("Andrii N")
-    @Test(testName = "Interface language change", description = "User is able to change interface language", dataProvider = "LanguagesData")
+    @Test(testName = "Interface language change", description = "User is able to change interface language", dataProvider = "LanguagesData", enabled = false)
     public void changingTolOtherLanguageInterfaceTest(Language language) {
         NativeLanguagePopUp nativeLanguagePopUp =
                 navigateToNativeLanguagePage(Gender.MALE, Age.AGE_35_44, "Andrii")

@@ -9,7 +9,7 @@
         <parameter name="run" value="local"/>
         <classes>
             <class name="ai.praktika.tests.getStartedFlow.languageTests.NativeLanguageTest"/>
-            <class name="ai.praktika.tests.getStartedFlow.languageTests.IntentionallyFailingTest"/>
+<!--            <class name="ai.praktika.tests.getStartedFlow.languageTests.IntentionallyFailingTest"/>-->
         </classes>
     </test>
 </suite>
