@@ -23,7 +23,7 @@ public class AdbUtils {
             while ((line = reader.readLine()) != null) {
                 System.out.println("*******" + line); // Print each package name
             }
-       //     Thread.sleep(10000);
+            Thread.sleep(15000);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -31,6 +31,11 @@ public class AdbUtils {
 
     @Step
     public static void listInstalledPackages() {
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         try {
             // Execute the ADB command to list packages
             Process process = Runtime.getRuntime().exec("adb shell pm list packages");
