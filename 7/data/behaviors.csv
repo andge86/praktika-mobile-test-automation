@@ -1,0 +1,5 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"Customer Get Started Flow","Multi Languages Support","Change application interface language","0","0","0","0","1"
+"Customer Get Started Flow","Multi Languages Support","","0","1","0","0","0"
+"Customer Get Started Flow","Multi Languages Support","Customer chooses partially supported language","0","0","0","1","0"
+"Customer Get Started Flow","Multi Languages Support","Keep English as application language interface","0","0","0","1","0"
