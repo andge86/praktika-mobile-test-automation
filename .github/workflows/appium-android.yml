@@ -63,7 +63,7 @@ jobs:
         with:
           api-level: ${{ matrix.api-level }}
           target: ${{ matrix.target }}
-          arch: x86_64
+          arch: arm64-v8a
           profile: Nexus 9
           pre-emulator-launch-script: adb version
           script: adb install-multiple apps/base.apk apps/split_config.en.apk apps/split_config.ar.apk apps/split_config.arm64_v8a.apk apps/split_config.xxhdpi.apk & mvn clean test -DsuiteXmlFile=TestNG_Android.xml
