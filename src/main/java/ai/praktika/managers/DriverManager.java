@@ -38,7 +38,7 @@ public class DriverManager {
     private static DesiredCapabilities getDesiredCapabilities(String platformName) {
         // Here I mention only base required capabilities to run automation on Android emulator
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        // I do not have .apk file, so I am assuming that the latest version of app under tests is already installed
+        // I do not have complete .apk file, so I am assuming that the latest version of app using adb install-multiple command in BaseTest
         // capabilities.setCapability("app", System.getProperty("user.dir") + "/apps/android_praktika_app.apk");
         capabilities.setCapability("appium:appPackage", "ai.praktika.android");
         capabilities.setCapability("appium:appActivity", "ai.praktika.android.MainActivity");
@@ -46,10 +46,6 @@ public class DriverManager {
         capabilities.setCapability("appium:automationName", "UiAutomator2");
         capabilities.setCapability("appium:autoGrantPermissions", true);
         capabilities.setCapability("appium:noReset", false);
-
-        capabilities.setCapability("appium:sessionOverride", true);
-        capabilities.setCapability("appium:newCommandTimeout", 100); // 5 minutes
-
         return capabilities;
     }
 
