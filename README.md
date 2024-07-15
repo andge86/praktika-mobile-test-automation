@@ -21,7 +21,7 @@ Java + Appium + TestNG + Allure Reports + GitHub Actions CI
 1. Install appium2 (by "brew install appium") (node.js is also required) and uiautomator2 driver (by "appium driver install uiautomator2")
 2. Do not forget to add ANDROID_HOME env variable
 3. Launch appium core server by running "appium" command
-4. Install Android studio and launch Android emulator
+4. Install Android studio and launch Android emulator (also install praktika app on the emulator)
 5. Setup Maven and Java 21
 6. Clone repository
 7. In the root directory run "mvn clean test -DsuiteXmlFile=TestNG_Android.xml"
