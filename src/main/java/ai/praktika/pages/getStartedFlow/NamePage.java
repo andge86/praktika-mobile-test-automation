@@ -1,7 +1,6 @@
 package ai.praktika.pages.getStartedFlow;
 
 import ai.praktika.pages.BasePage;
-import ai.praktika.utils.ElementActionUtils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.qameta.allure.Step;
