@@ -39,6 +39,7 @@ public class NativeLanguageTest extends BaseTest {
                 navigateToNativeLanguagePage(Gender.MALE, Age.AGE_35_44, "Andrii")
                         .chooseFullySupportedLanguage(language, true);
 
+        // Here used soft assert which won't fail the test when single assert fails, but will proceed to the end of the test
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(nativeLanguagePopUp.getTextFromButtonSwitchTo(), "Switch to " + language.getDisplayName(),
                 "Button text is not 'Switch to " + language.getDisplayName() + "'");
@@ -65,7 +66,6 @@ public class NativeLanguageTest extends BaseTest {
                 navigateToNativeLanguagePage(Gender.FEMALE, Age.AGE_UNDER_18, "Bianca")
                         .chooseFullySupportedLanguage(language, true);
 
-        // Here used soft assert which won't fail the test when single assert fails, but will proceed to the end of the test
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(nativeLanguagePopUp.getTextFromButtonSwitchTo(), "Switch to " + language.getDisplayName(),
                 "Button text is not 'Switch to " + language.getDisplayName() + "'");
