@@ -22,15 +22,17 @@ public class NativeLanguagePage extends BasePage {
 
     @Step
     public NativeLanguagePopUp chooseFullySupportedLanguage(Language language, boolean isVisible) {
-        if (isVisible) elementActionUtils.waitAndTapByXPath("//*[@resource-id = 'ui_button_" + language.getDisplayName() + "']");
+        if (isVisible)
+            elementActionUtils.waitAndTapByXPath("//*[@resource-id = 'ui_button_" + language.getDisplayName() + "']");
         else searchForAndConfirm(language);
         return new NativeLanguagePopUp(driver);
     }
 
     public HobbiesAndInterestsPage choosePartiallySupportedLanguage(Language language, boolean isVisible) {
-      if (isVisible) elementActionUtils.waitAndTapByXPath("//*[@resource-id = 'ui_button_" + language.getDisplayName() + "']");
-      else searchForAndConfirm(language);
-      return new HobbiesAndInterestsPage(driver);
+        if (isVisible)
+            elementActionUtils.waitAndTapByXPath("//*[@resource-id = 'ui_button_" + language.getDisplayName() + "']");
+        else searchForAndConfirm(language);
+        return new HobbiesAndInterestsPage(driver);
     }
 
     @Step

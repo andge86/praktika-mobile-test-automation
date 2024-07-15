@@ -2,13 +2,13 @@
 
 name: Java Appium CI
 
-# Here wew have only manual triggering of CI pipeline,
+# Here we have only manually triggered CI pipeline,
 # but we can have it triggered as a part of development pipeline (on merge, etc.) or as nightly regression run using schedule
 on:
   workflow_dispatch:
     inputs:
       run:
-        description: 'Will trigger mobile tests locally inside pipeline or remotely using device farm'
+        description: 'Will trigger mobile tests locally inside pipeline or remotely using device farm (remote is not available for now)'
         type: choice
         required: true
         default: local
@@ -51,8 +51,6 @@ jobs:
 
       - name: Installing and running Appium and uiautomator2
         run: |
-          pwd
-          ls
           npm install -g appium
           appium -v
           appium driver install uiautomator2
@@ -63,10 +61,10 @@ jobs:
         with:
           api-level: ${{ matrix.api-level }}
           target: ${{ matrix.target }}
-          arch: arm64-v8a
+          arch: x86_64
           profile: Nexus 9
           pre-emulator-launch-script: adb version
-          script: adb install-multiple apps/base.apk apps/split_config.en.apk apps/split_config.ar.apk apps/split_config.arm64_v8a.apk apps/split_config.xxhdpi.apk & mvn clean test -DsuiteXmlFile=TestNG_Android.xml
+          script: mvn clean test -DsuiteXmlFile=TestNG_Android.xml
         continue-on-error: true
 
       - name: Get Allure history

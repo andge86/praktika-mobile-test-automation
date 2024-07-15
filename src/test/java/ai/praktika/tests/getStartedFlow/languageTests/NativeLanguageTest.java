@@ -1,14 +1,14 @@
 package ai.praktika.tests.getStartedFlow.languageTests;
 
-import ai.praktika.tests.BaseTest;
 import ai.praktika.enums.Age;
+import ai.praktika.enums.Gender;
 import ai.praktika.enums.Language;
 import ai.praktika.managers.DriverManager;
 import ai.praktika.pages.WelcomePage;
-import ai.praktika.enums.Gender;
 import ai.praktika.pages.getStartedFlow.HobbiesAndInterestsPage;
 import ai.praktika.pages.getStartedFlow.NativeLanguagePage;
 import ai.praktika.pages.getStartedFlow.NativeLanguagePopUp;
+import ai.praktika.tests.BaseTest;
 import io.qameta.allure.*;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -32,8 +32,9 @@ public class NativeLanguageTest extends BaseTest {
     @Story("Change application interface language")
     @Severity(SeverityLevel.CRITICAL)
     @Owner("Andrii N")
-    @Test(testName = "Interface language change", description = "User is able to change interface language", dataProvider = "LanguagesData", enabled = false)
+    @Test(testName = "Interface language change", description = "User is able to change interface language", dataProvider = "LanguagesData")
     public void changingTolOtherLanguageInterfaceTest(Language language) {
+
         NativeLanguagePopUp nativeLanguagePopUp =
                 navigateToNativeLanguagePage(Gender.MALE, Age.AGE_35_44, "Andrii")
                         .chooseFullySupportedLanguage(language, true);
@@ -57,6 +58,7 @@ public class NativeLanguageTest extends BaseTest {
     @Owner("Andrii N")
     @Test(testName = "Keeping English language interface", description = "User is able to keep interface language as English")
     public void keepingEnglishLanguageInterfaceTest() {
+
         Language language = Language.ITALIAN;
 
         NativeLanguagePopUp nativeLanguagePopUp =
