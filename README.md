@@ -35,7 +35,10 @@ Allure Report looks like this locally:
 <img width="1397" alt="Screenshot 2024-07-15 at 5 11 43 AM" src="https://github.com/user-attachments/assets/8ad44845-7e36-4430-8a5a-c2e8ace377d3">
 <img width="1348" alt="Screenshot 2024-07-15 at 5 10 51 AM" src="https://github.com/user-attachments/assets/94bd7259-b8a1-455c-9347-e841515b65f9">
 
-
+## Several bugs/issues noted during test automation (need to be discussed):
+1. Too long loading after taping on "Get Started" button at the Start screen
+2. User can tap "Continue" button without entering any name
+3. On Languages page if you scroll down many languages have no flags
     
 
 ### Please let me know in case if any additional functionality is required
