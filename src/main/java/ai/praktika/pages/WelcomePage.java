@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class WelcomePage extends BasePage {
 
-    @AndroidFindBy(xpath = "//*[@content-desc='GetStarted Button']")
+    @AndroidFindBy(xpath = "//*[@resource-id='ui_button_GetStarted']")
     private WebElement buttonGetStarted;
 
     public WelcomePage(AppiumDriver driver) {

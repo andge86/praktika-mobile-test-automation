@@ -14,9 +14,9 @@ public class ElementActionUtils {
     // We will use implicit waits for all the interactions. Explicit wait is commented in DriverManager class
     private final WebDriverWait wait;
 
-     public ElementActionUtils(AppiumDriver driver) {
+    public ElementActionUtils(AppiumDriver driver) {
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-     }
+    }
 
     /**
      * Uses explicit wait until element to be clickable and clicks on it
@@ -40,7 +40,7 @@ public class ElementActionUtils {
      * Uses explicit wait until element to be clickable, clears the text if present and types the text into it
      *
      * @param element is used to find element by xpath
-     * @param text is typed into the element
+     * @param text    is typed into the element
      */
     public void waitAndTypeText(WebElement element, String text) {
         WebElement webElement = wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -51,7 +51,7 @@ public class ElementActionUtils {
     /**
      * Uses explicit wait until element is visible and returns attribute value as String without next line formatting
      *
-     * @param element to fetch the attribute text from
+     * @param element   to fetch the attribute text from
      * @param attribute defines which attribute's value to return
      * @return the String value of element's attribute as one line text
      */

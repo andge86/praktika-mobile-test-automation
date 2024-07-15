@@ -15,6 +15,8 @@ public class IntentionallyFailingTest extends BaseTest {
     @Test(testName = "Intentionally failing feature with screenshot on failure",
             description = "Intentionally failing feature test to see the screenshot on failure")
     public void intentionallyFailingFeatureTest() {
+
         Assert.fail("Intentionally failing feature test to see the screenshot on failure");
+
     }
 }

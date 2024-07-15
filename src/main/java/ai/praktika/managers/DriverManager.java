@@ -22,8 +22,10 @@ public class DriverManager {
         DesiredCapabilities capabilities = getDesiredCapabilities(platformName);
         try {
             switch (platformName + "|" + run) {
-                case "Android|local" -> driver.set(new AndroidDriver(new URI("http://localhost:4723").toURL(), capabilities));
-                case "Android|remote" -> driver.set(new AndroidDriver(new URI("http://remote.device.farm/wd/hub").toURL(), capabilities));
+                case "Android|local" ->
+                        driver.set(new AndroidDriver(new URI("http://localhost:4723").toURL(), capabilities));
+                case "Android|remote" ->
+                        driver.set(new AndroidDriver(new URI("http://remote.device.farm/wd/hub").toURL(), capabilities));
                 default -> throw new RuntimeException("Only Android platformName with local run is supported");
             }
         } catch (MalformedURLException e) {
@@ -38,7 +40,7 @@ public class DriverManager {
     private static DesiredCapabilities getDesiredCapabilities(String platformName) {
         // Here I mention only base required capabilities to run automation on Android emulator
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        // I do not have complete .apk file, so I am assuming that the latest version of app using adb install-multiple command in BaseTest
+        // I do not have complete .apk file, so I am assuming that the latest version of app is already installed from Google Play
         // capabilities.setCapability("app", System.getProperty("user.dir") + "/apps/android_praktika_app.apk");
         capabilities.setCapability("appium:appPackage", "ai.praktika.android");
         capabilities.setCapability("appium:appActivity", "ai.praktika.android.MainActivity");

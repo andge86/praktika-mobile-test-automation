@@ -2,7 +2,6 @@ package ai.praktika.pages.getStartedFlow;
 
 import ai.praktika.pages.BasePage;
 import ai.praktika.pages.getStartedFlow.modules.ProgressModule;
-import ai.praktika.utils.ElementActionUtils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.qameta.allure.Step;
@@ -25,8 +24,8 @@ public class HobbiesAndInterestsPage extends BasePage {
 
     @Step
     public String getTextFromMainHeader() {
-      return elementActionUtils.waitAndGetTextByAttribute(textMainHeader, "content-desc")
-              .replaceAll("\n", " ");
+        return elementActionUtils.waitAndGetTextByAttribute(textMainHeader, "content-desc")
+                .replaceAll("\n", " ");
     }
 
 }
